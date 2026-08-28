@@ -1,0 +1,105 @@
+.header {
+  padding: var(--space-xl) 0 var(--space-lg);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-hero);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.header-title {
+  font-size: var(--text-5xl);
+  font-weight: 900;
+  background: var(--gradient-hero-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: var(--space-sm);
+  animation: shimmer 3s ease infinite;
+  background-size: 200% auto;
+}
+
+.header-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+  font-weight: 400;
+}
+
+.header-date {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--accent-secondary);
+  background: rgba(6, 182, 212, 0.1);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.header-greeting {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.header-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: var(--text-3xl);
+  }
+}
+
+.pomodoro-quick-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-xs) var(--space-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  animation: pulse-glow-red 3s ease infinite;
+}
+
+.pomodoro-quick-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+}
+
+.pomodoro-quick-btn:active {
+  transform: scale(0.97);
+}
+
+@keyframes pulse-glow-red {
+  0%, 100% { box-shadow: 0 0 8px rgba(239, 68, 68, 0.2); }
+  50% { box-shadow: 0 0 16px rgba(239, 68, 68, 0.35); }
+}

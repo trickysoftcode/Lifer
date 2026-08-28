@@ -1,0 +1,231 @@
+.plan-detail-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.plan-detail-topbar {
+  position: sticky;
+  top: 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: var(--space-md) var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: var(--z-sticky);
+  backdrop-filter: blur(12px);
+}
+
+.plan-detail-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.plan-detail-main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+/* Hero */
+.plan-hero {
+  margin-bottom: var(--space-2xl);
+}
+
+.plan-hero-title {
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  margin-bottom: var(--space-sm);
+}
+
+.plan-hero-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+
+.plan-hero-desc {
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+/* Section Block */
+.plan-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.plan-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.plan-section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.plan-section-title .icon {
+  color: var(--accent-primary);
+}
+
+/* Checklist Items */
+.plan-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-input);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-xs);
+  transition: background var(--transition-fast);
+}
+
+.plan-item:hover {
+  background: var(--bg-elevated);
+}
+
+.plan-item .item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-item .item-title {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.plan-item .item-subtitle {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.plan-item .item-amount {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent-warning);
+}
+
+.plan-item .delete-item-btn {
+  opacity: 0;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  transition: all var(--transition-fast);
+}
+
+.plan-item:hover .delete-item-btn {
+  opacity: 1;
+}
+
+.plan-item .delete-item-btn:hover {
+  color: var(--accent-danger);
+}
+
+/* Add Item Form */
+.add-item-form {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.add-item-form input {
+  flex: 1;
+}
+
+.add-item-form .amount-input {
+  max-width: 120px;
+}
+
+/* Budget Summary */
+.budget-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.budget-summary-card {
+  padding: var(--space-md);
+  background: var(--bg-input);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  text-align: center;
+}
+
+.budget-summary-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+}
+
+.budget-summary-value {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  font-family: var(--font-mono);
+}
+
+/* Itinerary Day */
+.itinerary-day {
+  margin-bottom: var(--space-md);
+}
+
+.itinerary-day-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.itinerary-day-badge {
+  background: var(--accent-primary);
+  color: white;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+
+.itinerary-day-date {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Notes Section */
+.plan-notes-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: var(--space-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  resize: vertical;
+  outline: none;
+  line-height: 1.7;
+  transition: border-color var(--transition-fast);
+}
+
+.plan-notes-textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}

@@ -1,0 +1,198 @@
+.finance-section {
+  padding: var(--space-lg);
+}
+
+.finance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.finance-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+.finance-title .icon {
+  color: var(--accent-success);
+}
+
+/* Summary Cards */
+.finance-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.summary-card {
+  padding: var(--space-md);
+  background: var(--bg-input);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.summary-card-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.summary-card-value {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  font-family: var(--font-mono);
+}
+
+.summary-card-value.income {
+  color: var(--accent-success);
+}
+
+.summary-card-value.expense {
+  color: var(--accent-danger);
+}
+
+.summary-card-value.net {
+  color: var(--accent-secondary);
+}
+
+/* Content Layout */
+.finance-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+/* Add Transaction Form */
+.finance-form {
+  background: var(--bg-input);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.finance-form h4 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* Transaction List */
+.transaction-list-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-item:hover {
+  background: var(--bg-elevated);
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.transaction-desc {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.transaction-meta {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.transaction-amount {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.transaction-amount.income {
+  color: var(--accent-success);
+}
+
+.transaction-amount.expense {
+  color: var(--accent-danger);
+}
+
+.transaction-delete {
+  opacity: 0;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  transition: all var(--transition-fast);
+}
+
+.transaction-item:hover .transaction-delete {
+  opacity: 1;
+}
+
+.transaction-delete:hover {
+  color: var(--accent-danger);
+}
+
+/* Chart Section */
+.finance-chart {
+  background: var(--bg-input);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.finance-chart h4 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+}
+
+.chart-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 768px) {
+  .finance-summary {
+    grid-template-columns: 1fr;
+  }
+  .finance-content {
+    grid-template-columns: 1fr;
+  }
+}
