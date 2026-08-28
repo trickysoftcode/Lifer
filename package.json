@@ -1,7 +1,14 @@
 {
   "name": "lifer",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Premium personal life dashboard — track habits, tasks, goals, projects, finances, media, and more with AI-powered insights.",
+  "author": "Gautam (https://github.com/trickysoftcode)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trickysoftcode/Lifer.git"
+  },
+  "license": "UNLICENSED",
   "type": "module",
   "scripts": {
     "dev": "vite",
